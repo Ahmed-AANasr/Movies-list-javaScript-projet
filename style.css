@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    pointer-events: none;
+    display: none;
+}
+
+#backdrop.visible {
+    display: block;
+    pointer-events: all;
+}
+
+#add-modal {
+    width: 80%;
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 10px 15px;
+    box-shadow: 2px 1px 5px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.modal__content label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal__content input {
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.modal__actions {
+    float: right;
+}
+
+.btn--passive {
+    padding: 8px 20px;
+    margin: 12px 0;
+    margin-right: 15px;
+    border: none;
+    background-color: #fff;
+    color: #0101ad;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn--success {
+    padding: 5px 25px;
+    background-color: #0101ad;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.modal {
+    position: fixed;
+    z-index: 100;
+    width: 80%;
+    top: 30vh;
+    left: 10%;
+    display: none;
+}
+
+.modal.visible {
+    display: block;
+    animation: fade-slide-in 0.5s ease-in-out forwards;
+    -webkit-animation: fade-slide-in 0.5s ease-in-out forwards;
+}
+
+#delete-modal {
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#delete-modal .modal__title {
+    color: #fff;
+    background-color: #0101ad;
+    padding: 10px;
+}
+
+#delete-modal .modal__content {
+    font-size: 20px;
+    padding: 15px 10px;
+}
+
+#delete-modal .btn--passive {
+    color: #0101ad;
+    margin-right: 15px;
+}
+
+#delete-modal .btn--success {
+    background-color: #0101ad;
+    color: #fff;
+    margin-right: 10px;
+    padding: 5px 20px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+/* .modal__content.invisible {
+    display: none;
+} */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #0101ad;
+    width: 100%;
+}
+
+header h1 {
+    color: #fff;
+    margin: 5px;
+}
+
+header button {
+    background-color: #fc6b36;
+    color: #fff;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    cursor: pointer;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+#entry-text {
+    box-shadow: 2px 1px 5px;
+    text-align: center;
+    margin: 25px 0;
+    padding: 30px 10px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+
+.movie-element {
+    margin: 1rem 0;
+    box-shadow: 0 2px 8p rgba(0, 0, 0, 0.26);
+    border: 10px;
+    display: flex;
+    width: 80%;
+    margin: 15px auto;
+    box-shadow: 2px 1px 5px;
+    background-color: #fff;
+    border: 1px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.invisible {
+    display: none;
+}
+
+.movie-element__image img {
+    width: 50%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 1px;
+}
+
+.movie-element_info {
+    padding: 5px 0;
+    margin-left: calc(202px - 40%);
+}
+
+.movie-element_info h2 {
+    padding-bottom: 5px;
+}
+
+.movie-element_info p {
+    font-size: 20px;
+    background-color: #fc6b36;
+    padding: 0 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
